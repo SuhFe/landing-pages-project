@@ -1,0 +1,345 @@
+/* PALETA DE CORES NEUTRAS COM TOM DE VERDE */
+:root {
+  --bg-main: #f7f9f7;
+  --bg-surface: #ffffff;
+  --bg-alt: #eef2ee;
+  --primary: #2d5a44;
+  --primary-hover: #234735;
+  --primary-light: #e4ebe5;
+  --text-dark: #202b24;
+  --text-muted: #5a665e;
+  --border-color: #d1dad3;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-form {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-form input {
+  border: none;
+  padding: 6px 12px;
+  outline: none;
+  font-size: 0.9rem;
+  background-color: var(--bg-main);
+}
+
+.search-form button {
+  background: var(--bg-surface);
+  border: none;
+  border-left: 1px solid var(--border-color);
+  padding: 6px 10px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.search-form button:hover {
+  color: var(--primary);
+}
+
+.btn-login-trigger {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-login-trigger:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* HERO SECTION */
+.hero-section {
+  padding: 60px 0;
+  text-align: center;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+/* RECURSOS / GRID 3 COLUNAS */
+.features-section {
+  padding: 60px 0;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 160px;
+  background-color: var(--primary-light);
+  border: 1px dashed var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.card-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* SPLIT SECTIONS (Imagens e Textos alternados) */
+.split-section {
+  padding: 60px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.split-section.bg-alt {
+  background-color: var(--bg-alt);
+}
+
+.split-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.split-layout.reverse {
+  flex-direction: row-reverse;
+}
+
+.split-text, .split-media {
+  flex: 1;
+}
+
+.split-text h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.split-text p {
+  color: var(--text-muted);
+}
+
+.image-placeholder.large {
+  height: 240px;
+}
+
+/* CTA SECTION */
+.cta-section {
+  padding: 50px 0 70px;
+}
+
+.btn-cta {
+  display: block;
+  text-align: center;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-cta:hover {
+  background-color: var(--primary-hover);
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  padding: 20px 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* MODAL DE LOGIN */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  padding: 30px;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.modal-card h2 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* RESPONSIVIDADE (Mobile) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .split-layout, .split-layout.reverse {
+    flex-direction: column;
+  }
+}
